@@ -23,9 +23,13 @@ end
 def update_special_award_quality 
   if @award.name == "Blue Compare"
     update_blue_compare
-  elsif @award.name == "Blue Distinction Plus"
-    update_blue_distinction
+  elsif @award.name == "Blue First"
+    update_blue_first
   end
+end
+
+def update_blue_first 
+
 end
 
 def update_blue_compare
@@ -40,16 +44,7 @@ def update_blue_compare
   end
 end
 
-def update_blue_distinction
-  # if @award.expires_in <=0 
-  #   @award.quality = 80 
-  # elsif @award.expires_in < 6
-  #   @award.quality += 2
-  # else 
-  #   @award.quality += 1
-  # end
 
-end
 
 def negative_multiplier 
   return 2 if @award.expires_in <= 0
