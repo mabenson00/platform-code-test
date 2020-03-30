@@ -1,7 +1,8 @@
 require 'rspec'
 require 'update_quality'
+require 'pry'
 
-describe '#update_quality' do
+describe '#update_awards' do
 
   context 'Given a single award' do
     let(:initial_expires_in) { 5 }
@@ -10,7 +11,7 @@ describe '#update_quality' do
 
     context 'when quality is updated' do
       before do
-        update_quality([award])
+        update_awards([award])
       end
 
       context 'given a normal award' do
@@ -224,7 +225,7 @@ describe '#update_quality' do
 
     context 'when quality is updated' do
       before do
-        update_quality(awards)
+        update_awards(awards)
       end
 
       specify { expect(awards[0].quality).to eq(9) }
