@@ -12,6 +12,8 @@ Award = Struct.new(:name, :expires_in, :quality) do
   end
 
   def handle_boundaries
+    return if self.name == "Blue Distinction Plus"
+    
     if self.quality > 50 
       self.quality = 50
     elsif self.quality < 0
